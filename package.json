@@ -1,0 +1,89 @@
+{
+	"name": "ally",
+	"displayName": "ally",
+	"description": "a set of functions to help you work with mssql server",
+	"publisher": "Ally",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.39.0",
+		"azdata": "*"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "Ally.QueryTextCase.Upper",
+				"title": "Ally: Change MS SQL reserved words (to uppercase) in the active editor"
+			},
+			{
+				"command": "Ally.QueryTextCase.Lower",
+				"title": "Ally: Change MS SQL reserved words (to lowercase) in the active editor"
+			}
+		],
+		"configuration": [
+			{
+				"id": "Ally.QueryTextCase",
+				"title": "Change MS SQL reserved words while editing the script",
+				"properties": {
+					"Ally.QueryTextCase.Debug": {
+						"type": "string",
+						"default": "off",
+						"description": "self-debug mode",
+						"enum": [
+							"off",
+							"debug",
+							"trace"
+						]
+					},
+					"Ally.QueryTextCase.Case": {
+						"type": "string",
+						"default": "off",
+						"description": "register selection",
+						"enum": [
+							"lower",
+							"upper",
+							"off"
+						],
+						"enumDescriptions": [
+							"all MS SQL reserved worlds in lower format",
+							"all MS SQL reserved worlds in upper format",
+							"do not change reserved worlds. But you can use two commands 'Ally.QueryTextCase.Upper' and 'Ally.QueryTextCase.Lower' in [Command Palette...]"
+						]
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js",
+		"proposedapi": "node installTypings.js"
+	},
+	"devDependencies": {
+		"@types/azdata": "*",
+		"@types/glob": "^8.0.1",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "^18.13.0",
+		"@types/vscode": "^1.75.1",
+		"@typescript-eslint/eslint-plugin": "^5.52.0",
+		"@typescript-eslint/parser": "^5.52.0",
+		"azdata-test": "^1.x",
+		"eslint": "^8.34.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"typescript": "^4.9.5"
+	},
+	"dependencies": {
+		"mssqlrefine": "^0.2.4"
+	}
+}
