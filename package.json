@@ -2,8 +2,8 @@
 	"name": "ally",
 	"displayName": "ally",
 	"description": "a set of functions to help you work with mssql server",
-	"publisher": "Ally",
-	"version": "0.0.1",
+	"publisher": "Vasilev Vitalii",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": "^1.39.0",
 		"azdata": "*"
@@ -53,7 +53,7 @@
 						"enumDescriptions": [
 							"all MS SQL reserved worlds in lower format",
 							"all MS SQL reserved worlds in upper format",
-							"do not change reserved worlds. But you can use two commands 'Ally.QueryTextCase.Upper' and 'Ally.QueryTextCase.Lower' in [Command Palette...]"
+							"do not change reserved worlds, but you can use two commands 'Ally: Change MS SQL reserved words ...' in [Command Palette...]"
 						]
 					}
 				}
