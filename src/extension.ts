@@ -46,7 +46,7 @@ export function activate(context: vscode.ExtensionContext) {
         try {
             if (shared.inEditText) return
             shared.inEditText = true
-            OnCommand_Ally_QueryTextCase_Lower('upper', shared.tokens, shared.refineService)
+            OnCommand_Ally_QueryTextCase('upper', shared.tokens, shared.refineService)
             shared.inEditText = false
         } catch (ex) {
             shared.inEditText = false
@@ -58,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
         try {
             if (shared.inEditText) return
             shared.inEditText = true
-            OnCommand_Ally_QueryTextCase_Lower('lower', shared.tokens, shared.refineService)
+            OnCommand_Ally_QueryTextCase('lower', shared.tokens, shared.refineService)
             shared.inEditText = false
         } catch (ex) {
             shared.inEditText = false
@@ -115,7 +115,7 @@ function onDidChangeTextDocument(
     const editor = vscode.window.activeTextEditor
     if (!editor) return
     const document = event.document
-    if (!document) return
+    if (!document || document.languageId !== 'sql') return
 
     log('trace', `onDidChangeTextDocument - edit in line ${line}`)
     let tStart = -1
@@ -172,7 +172,7 @@ function onDidChangeTextDocument(
     }
 }
 
-function OnCommand_Ally_QueryTextCase_Lower(
+function OnCommand_Ally_QueryTextCase(
     caseWorld: TCase,
     tokens: TTokenLine[],
     refineService: RefineService
@@ -184,7 +184,7 @@ function OnCommand_Ally_QueryTextCase_Lower(
     if (!document) return
 
     tokens.splice(0)
-    var text = Array(document.lineCount - 1)
+    var text = Array(document.lineCount)
     for (let i = 0; i < text.length; i++) {
         text[i] = document.lineAt(i).text
     }

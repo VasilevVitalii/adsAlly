@@ -1,9 +1,7 @@
 # Change Log
 
-All notable changes to the "ally" extension will be documented in this file.
+## [0.1.0] - 2023-02-20
+### Added
+- automatically convert MSSQL reserved world to uppercase or lowercase when you type query
+- commands for MSSQL reserved world to uppercase or lowercase all text in editor
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release

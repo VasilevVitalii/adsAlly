@@ -1,13 +1,21 @@
-# README
-## This is the README for your extension "ally"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+<div id="badges">
+  <a href="https://www.linkedin.com/in/vasilev-vitalii/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+</div>
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+# ![logo](images/favicon-128x128.png) ally
+**A set of functions to help you work with mssql server**
+<br />
+<br />
+**Q**: why in the description of the extension there are the words "set of functions", but there is only one function?<br />
+**A**: this extension is based on my tokenizer https://github.com/VasilevVitalii/mssqlrefine, which I plan to develop further. In parallel adding new features to this extension.
+## License
+*MIT*
+## Features
+* Automatically convert MSSQL reserved world to uppercase or lowercase when you type query (use setting "Ally.Query Text Case: Case")<br />
+![Usage](images/video1.gif)
+* Commands for MSSQL reserved world to uppercase or lowercase all text in editor<br />
+![Usage](images/video2.gif)
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-**Enjoy!**
