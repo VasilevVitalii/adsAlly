@@ -4,7 +4,7 @@
   </a>
 </div>
 
-# ![logo](images/favicon-128x128.png) ally
+# ally
 **A set of functions to help you work with mssql server**
 <br />
 <br />
@@ -14,8 +14,9 @@
 *MIT*
 ## Features
 * Automatically convert MSSQL reserved world to uppercase or lowercase when you type query (use setting "Ally.Query Text Case: Case")<br />
-![Usage](images/video1.gif)
+![Feature](https://github.com/VasilevVitalii/adsAlly/blob/main/images/video1.gif)
 * Commands for MSSQL reserved world to uppercase or lowercase all text in editor<br />
-![Usage](images/video2.gif)
+![Feature](https://github.com/VasilevVitalii/adsAlly/blob/main/images/video2.gif)
+
 
 
