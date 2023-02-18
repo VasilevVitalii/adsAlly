@@ -17,6 +17,3 @@
 ![Feature](https://github.com/VasilevVitalii/adsAlly/blob/main/images/video1.gif)
 * Commands for MSSQL reserved world to uppercase or lowercase all text in editor<br />
 ![Feature](https://github.com/VasilevVitalii/adsAlly/blob/main/images/video2.gif)
-
-
-
